@@ -21,13 +21,13 @@ const projects = [
       "Inngest",
       "Better Auth"
     ],
-    liveUrl: "#",
+    liveUrl: "https://helloai-agent.vercel.app",
     githubUrl: "https://github.com/meet1075/helloai",
   },
   {
     title: "ApiForge",
     description: "ApiForge is a developer-friendly platform that makes API testing simple, allowing you to test REST and WebSocket endpoints effortlessly while generating production-ready code in seconds.",
-techStack: [
+    techStack: [
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
@@ -36,39 +36,39 @@ techStack: [
       "PostgreSQL",
       "Better Auth",
       "AI APIs"
-    ],    
-    liveUrl: "#",
+    ],
+    // liveUrl: "#",
     githubUrl: "https://github.com/meet1075/apiforge",
   },
   {
     title: "BuildUi",
     description: "BuildUI is an AI app builder that helps you create and edit full projects just by describing what you want. You can chat with it, make changes, and instantly preview your app — all in one simple workspace.",
-techStack: [
-  "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "TanStack React Query",
-  "Prisma ORM",
-  "PostgreSQL",
-  "Clerk Authentication",
-  "Clerk Billing",
-  "Inngest",
-  "OpenAI",
-  "E2B Sandbox"
-],    liveUrl: "#",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "TanStack React Query",
+      "Prisma ORM",
+      "PostgreSQL",
+      "Clerk Authentication",
+      "Clerk Billing",
+      "Inngest",
+      "OpenAI",
+      "E2B Sandbox"],
+    // ],    liveUrl: "#",
     githubUrl: "https://github.com/meet1075/buildui",
   },
   {
     title: "InterviewMate",
     description: "InterviewMate is an AI-powered interview preparation platform that generates domain-specific questions, evaluates answers with intelligent feedback, and tracks user performance through mock interviews and leaderboards.",
-  techStack: [
-  "Next.js",
-  "TypeScript",
-  "MongoDB",
-  "Clerk Authentication",
-  "OpenAI API",
-  "Tailwind CSS"
-],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Clerk Authentication",
+      "OpenAI API",
+      "Tailwind CSS"
+    ],
     liveUrl: "https://interviewmatee.vercel.app/",
     githubUrl: "https://github.com/meet1075/interviewmate",
   },
@@ -163,17 +163,19 @@ export default function Projects({ limit, showViewAll = false, titleOnly = false
                         </svg>
                         Repo
                       </a>
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-gray-400 hover:text-[#f5f5f5] transition-colors"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
-                        Visit
-                      </a>
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-gray-400 hover:text-[#f5f5f5] transition-colors"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          Visit
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 )}
